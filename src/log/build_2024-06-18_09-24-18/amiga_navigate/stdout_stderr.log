@@ -1,0 +1,42 @@
+running egg_info
+creating ../build/amiga_navigate/amiga_navigate.egg-info
+writing ../build/amiga_navigate/amiga_navigate.egg-info/PKG-INFO
+writing dependency_links to ../build/amiga_navigate/amiga_navigate.egg-info/dependency_links.txt
+writing entry points to ../build/amiga_navigate/amiga_navigate.egg-info/entry_points.txt
+writing requirements to ../build/amiga_navigate/amiga_navigate.egg-info/requires.txt
+writing top-level names to ../build/amiga_navigate/amiga_navigate.egg-info/top_level.txt
+writing manifest file '../build/amiga_navigate/amiga_navigate.egg-info/SOURCES.txt'
+reading manifest file '../build/amiga_navigate/amiga_navigate.egg-info/SOURCES.txt'
+writing manifest file '../build/amiga_navigate/amiga_navigate.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cairlab/amiga/src/build/amiga_navigate/build
+creating /home/cairlab/amiga/src/build/amiga_navigate/build/lib
+creating /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate
+copying amiga_navigate/waypoints.py -> /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate
+copying amiga_navigate/__init__.py -> /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate
+copying amiga_navigate/navigate.py -> /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate
+copying amiga_navigate/pid_controller.py -> /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate
+running install
+running install_lib
+creating /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate
+copying /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate/waypoints.py -> /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate
+copying /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate/__init__.py -> /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate
+copying /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate/navigate.py -> /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate
+copying /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate/pid_controller.py -> /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate
+byte-compiling /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate/waypoints.py to waypoints.cpython-38.pyc
+byte-compiling /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate/navigate.py to navigate.cpython-38.pyc
+byte-compiling /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate/pid_controller.py to pid_controller.cpython-38.pyc
+running install_data
+creating /home/cairlab/amiga/src/install/amiga_navigate/share/ament_index
+creating /home/cairlab/amiga/src/install/amiga_navigate/share/ament_index/resource_index
+creating /home/cairlab/amiga/src/install/amiga_navigate/share/ament_index/resource_index/packages
+copying resource/amiga_navigate -> /home/cairlab/amiga/src/install/amiga_navigate/share/ament_index/resource_index/packages
+copying package.xml -> /home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate
+running install_egg_info
+Copying ../build/amiga_navigate/amiga_navigate.egg-info to /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate-0.0.0-py3.8.egg-info
+running install_scripts
+Installing navigate script to /home/cairlab/amiga/src/install/amiga_navigate/lib/amiga_navigate
+Installing pid_controller script to /home/cairlab/amiga/src/install/amiga_navigate/lib/amiga_navigate
+writing list of installed files to '/home/cairlab/amiga/src/build/amiga_navigate/install.log'

@@ -1,0 +1,213 @@
+[0.707s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.708s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb1942490>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb1942490>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffb1942d60>)
+[1.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.262s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cairlab/amiga/src'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extensions ['ignore', 'ignore_ament_install']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extension 'ignore'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extension 'ignore_ament_install'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extensions ['colcon_pkg']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extension 'colcon_pkg'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extensions ['colcon_meta']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extension 'colcon_meta'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extensions ['ros']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_launch) by extension 'ros'
+[1.317s] DEBUG:colcon.colcon_core.package_identification:Package 'amiga_launch' with type 'ros.ament_python' and name 'amiga_launch'
+[1.317s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extensions ['ignore', 'ignore_ament_install']
+[1.317s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extension 'ignore'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extension 'ignore_ament_install'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extensions ['colcon_pkg']
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extension 'colcon_pkg'
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extensions ['colcon_meta']
+[1.318s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extension 'colcon_meta'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extensions ['ros']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_navigate) by extension 'ros'
+[1.320s] DEBUG:colcon.colcon_core.package_identification:Package 'amiga_navigate' with type 'ros.ament_python' and name 'amiga_navigate'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extensions ['ignore', 'ignore_ament_install']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extension 'ignore'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extension 'ignore_ament_install'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extensions ['colcon_pkg']
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extension 'colcon_pkg'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extensions ['colcon_meta']
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extension 'colcon_meta'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extensions ['ros']
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(amiga_sensors) by extension 'ros'
+[1.324s] DEBUG:colcon.colcon_core.package_identification:Package 'amiga_sensors' with type 'ros.ament_python' and name 'amiga_sensors'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.327s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.327s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.327s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.396s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/cairlab/amiga/src/install
+[1.402s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[1.411s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.662s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_args' from command line to 'None'
+[1.662s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_target' from command line to 'None'
+[1.662s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.662s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[1.662s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_clean_first' from command line to 'False'
+[1.663s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'cmake_force_configure' from command line to 'False'
+[1.663s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'ament_cmake_args' from command line to 'None'
+[1.663s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[1.663s] Level 5:colcon.colcon_core.verb:set package 'amiga_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.663s] DEBUG:colcon.colcon_core.verb:Building package 'amiga_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/amiga/src/build/amiga_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/amiga/src/install/amiga_launch', 'merge_install': False, 'path': '/home/cairlab/amiga/src/amiga_launch', 'symlink_install': False, 'test_result_base': None}
+[1.664s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_args' from command line to 'None'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_target' from command line to 'None'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_clean_cache' from command line to 'False'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_clean_first' from command line to 'False'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'cmake_force_configure' from command line to 'False'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'ament_cmake_args' from command line to 'None'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'catkin_cmake_args' from command line to 'None'
+[1.665s] Level 5:colcon.colcon_core.verb:set package 'amiga_navigate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.665s] DEBUG:colcon.colcon_core.verb:Building package 'amiga_navigate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/amiga/src/build/amiga_navigate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/amiga/src/install/amiga_navigate', 'merge_install': False, 'path': '/home/cairlab/amiga/src/amiga_navigate', 'symlink_install': False, 'test_result_base': None}
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_args' from command line to 'None'
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_target' from command line to 'None'
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[1.667s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[1.668s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[1.668s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[1.668s] Level 5:colcon.colcon_core.verb:set package 'amiga_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.668s] DEBUG:colcon.colcon_core.verb:Building package 'amiga_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/amiga/src/build/amiga_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/amiga/src/install/amiga_sensors', 'merge_install': False, 'path': '/home/cairlab/amiga/src/amiga_sensors', 'symlink_install': False, 'test_result_base': None}
+[1.668s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.673s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cairlab/amiga/src/amiga_launch' with build type 'ament_python'
+[1.674s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_launch', 'ament_prefix_path')
+[1.681s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.682s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/ament_prefix_path.ps1'
+[1.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/ament_prefix_path.dsv'
+[1.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/ament_prefix_path.sh'
+[1.693s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.693s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.715s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cairlab/amiga/src/amiga_navigate' with build type 'ament_python'
+[1.717s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_navigate', 'ament_prefix_path')
+[1.720s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/ament_prefix_path.ps1'
+[1.725s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/ament_prefix_path.dsv'
+[1.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/ament_prefix_path.sh'
+[1.735s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.736s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.763s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cairlab/amiga/src/amiga_sensors' with build type 'ament_python'
+[1.765s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_sensors', 'ament_prefix_path')
+[1.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/ament_prefix_path.ps1'
+[1.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/ament_prefix_path.dsv'
+[1.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/ament_prefix_path.sh'
+[1.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.623s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cairlab/amiga/src/amiga_launch'
+[2.625s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.626s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.470s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cairlab/amiga/src/amiga_navigate'
+[3.474s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.474s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.301s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cairlab/amiga/src/amiga_sensors'
+[4.305s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.306s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/amiga/src/amiga_navigate': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_navigate/prefix_override:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_navigate build --build-base /home/cairlab/amiga/src/build/amiga_navigate/build install --record /home/cairlab/amiga/src/build/amiga_navigate/install.log --install-scripts $base/lib/amiga_navigate --single-version-externally-managed install_data
+[5.979s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/amiga/src/amiga_launch': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_launch/prefix_override:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_launch build --build-base /home/cairlab/amiga/src/build/amiga_launch/build install --record /home/cairlab/amiga/src/build/amiga_launch/install.log --install-scripts $base/lib/amiga_launch --single-version-externally-managed install_data
+[6.005s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/amiga/src/amiga_sensors': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_sensors/prefix_override:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_sensors build --build-base /home/cairlab/amiga/src/build/amiga_sensors/build install --record /home/cairlab/amiga/src/build/amiga_sensors/install.log --install-scripts $base/lib/amiga_sensors --single-version-externally-managed install_data
+[7.170s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/amiga/src/amiga_sensors' returned '0': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_sensors/prefix_override:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_sensors build --build-base /home/cairlab/amiga/src/build/amiga_sensors/build install --record /home/cairlab/amiga/src/build/amiga_sensors/install.log --install-scripts $base/lib/amiga_sensors --single-version-externally-managed install_data
+[7.183s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors' for CMake module files
+[7.187s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors' for CMake config files
+[7.192s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors/lib'
+[7.192s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors/bin'
+[7.193s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors/lib/pkgconfig/amiga_sensors.pc'
+[7.194s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages'
+[7.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_sensors', 'pythonpath')
+[7.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/pythonpath.ps1'
+[7.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/pythonpath.dsv'
+[7.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/hook/pythonpath.sh'
+[7.208s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_sensors/bin'
+[7.209s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amiga_sensors)
+[7.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/package.ps1'
+[7.217s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/package.dsv'
+[7.220s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/package.sh'
+[7.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/package.bash'
+[7.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors/package.zsh'
+[7.227s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/amiga/src/install/amiga_sensors/share/colcon-core/packages/amiga_sensors)
+[7.234s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch' for CMake module files
+[7.237s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch' for CMake config files
+[7.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/amiga/src/amiga_launch' returned '0': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_launch/prefix_override:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_launch build --build-base /home/cairlab/amiga/src/build/amiga_launch/build install --record /home/cairlab/amiga/src/build/amiga_launch/install.log --install-scripts $base/lib/amiga_launch --single-version-externally-managed install_data
+[7.241s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch/lib'
+[7.241s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch/bin'
+[7.242s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch/lib/pkgconfig/amiga_launch.pc'
+[7.242s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages'
+[7.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_launch', 'pythonpath')
+[7.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/pythonpath.ps1'
+[7.245s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/pythonpath.dsv'
+[7.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/hook/pythonpath.sh'
+[7.249s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_launch/bin'
+[7.249s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amiga_launch)
+[7.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/package.ps1'
+[7.254s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/package.dsv'
+[7.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/package.sh'
+[7.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/package.bash'
+[7.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_launch/share/amiga_launch/package.zsh'
+[7.264s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/amiga/src/install/amiga_launch/share/colcon-core/packages/amiga_launch)
+[7.267s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate' for CMake module files
+[7.272s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/amiga/src/amiga_navigate' returned '0': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_navigate/prefix_override:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_navigate build --build-base /home/cairlab/amiga/src/build/amiga_navigate/build install --record /home/cairlab/amiga/src/build/amiga_navigate/install.log --install-scripts $base/lib/amiga_navigate --single-version-externally-managed install_data
+[7.273s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate' for CMake config files
+[7.276s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate/lib'
+[7.276s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate/bin'
+[7.276s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate/lib/pkgconfig/amiga_navigate.pc'
+[7.277s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages'
+[7.277s] Level 1:colcon.colcon_core.shell:create_environment_hook('amiga_navigate', 'pythonpath')
+[7.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/pythonpath.ps1'
+[7.280s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/pythonpath.dsv'
+[7.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/hook/pythonpath.sh'
+[7.283s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/amiga/src/install/amiga_navigate/bin'
+[7.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amiga_navigate)
+[7.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/package.ps1'
+[7.286s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/package.dsv'
+[7.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/package.sh'
+[7.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/package.bash'
+[7.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/amiga/src/install/amiga_navigate/share/amiga_navigate/package.zsh'
+[7.291s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/amiga/src/install/amiga_navigate/share/colcon-core/packages/amiga_navigate)
+[7.293s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.295s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.324s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.324s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.325s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.396s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.398s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/amiga/src/install/local_setup.ps1'
+[7.402s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/amiga/src/install/_local_setup_util_ps1.py'
+[7.410s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/amiga/src/install/setup.ps1'
+[7.415s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/amiga/src/install/local_setup.sh'
+[7.417s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/amiga/src/install/_local_setup_util_sh.py'
+[7.419s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/amiga/src/install/setup.sh'
+[7.423s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/amiga/src/install/local_setup.bash'
+[7.425s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/amiga/src/install/setup.bash'
+[7.431s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/amiga/src/install/local_setup.zsh'
+[7.433s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/amiga/src/install/setup.zsh'

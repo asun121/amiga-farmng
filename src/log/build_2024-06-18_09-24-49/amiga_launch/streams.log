@@ -1,0 +1,20 @@
+[3.873s] Invoking command in '/home/cairlab/amiga/src/amiga_launch': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_launch/prefix_override:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_launch build --build-base /home/cairlab/amiga/src/build/amiga_launch/build install --record /home/cairlab/amiga/src/build/amiga_launch/install.log --install-scripts $base/lib/amiga_launch --single-version-externally-managed install_data
+[4.656s] running egg_info
+[4.658s] writing ../build/amiga_launch/amiga_launch.egg-info/PKG-INFO
+[4.659s] writing dependency_links to ../build/amiga_launch/amiga_launch.egg-info/dependency_links.txt
+[4.666s] writing entry points to ../build/amiga_launch/amiga_launch.egg-info/entry_points.txt
+[4.667s] writing requirements to ../build/amiga_launch/amiga_launch.egg-info/requires.txt
+[4.668s] writing top-level names to ../build/amiga_launch/amiga_launch.egg-info/top_level.txt
+[4.794s] reading manifest file '../build/amiga_launch/amiga_launch.egg-info/SOURCES.txt'
+[4.797s] writing manifest file '../build/amiga_launch/amiga_launch.egg-info/SOURCES.txt'
+[4.799s] running build
+[4.801s] running build_py
+[4.806s] running install
+[4.809s] running install_lib
+[4.814s] running install_data
+[4.815s] running install_egg_info
+[4.820s] removing '/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages/amiga_launch-0.0.0-py3.8.egg-info' (and everything under it)
+[4.823s] Copying ../build/amiga_launch/amiga_launch.egg-info to /home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages/amiga_launch-0.0.0-py3.8.egg-info
+[4.827s] running install_scripts
+[4.892s] writing list of installed files to '/home/cairlab/amiga/src/build/amiga_launch/install.log'
+[4.998s] Invoked command in '/home/cairlab/amiga/src/amiga_launch' returned '0': PYTHONPATH=/home/cairlab/amiga/src/build/amiga_launch/prefix_override:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/amiga_launch build --build-base /home/cairlab/amiga/src/build/amiga_launch/build install --record /home/cairlab/amiga/src/build/amiga_launch/install.log --install-scripts $base/lib/amiga_launch --single-version-externally-managed install_data

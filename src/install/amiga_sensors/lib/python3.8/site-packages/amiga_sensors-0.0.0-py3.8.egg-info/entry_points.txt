@@ -1,0 +1,3 @@
+[console_scripts]
+gps = amiga_sensors.gps:main
+

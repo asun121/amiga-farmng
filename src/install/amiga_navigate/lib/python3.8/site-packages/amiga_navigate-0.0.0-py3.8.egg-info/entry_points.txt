@@ -1,0 +1,4 @@
+[console_scripts]
+navigate = amiga_navigate.navigate:main
+pid_controller = amiga_navigate.pid_controller:main
+

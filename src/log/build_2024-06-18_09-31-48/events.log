@@ -1,0 +1,132 @@
+[0.000000] (-) TimerEvent: {}
+[0.001940] (amiga_launch) JobQueued: {'identifier': 'amiga_launch', 'dependencies': OrderedDict()}
+[0.002602] (amiga_navigate) JobQueued: {'identifier': 'amiga_navigate', 'dependencies': OrderedDict()}
+[0.002736] (amiga_sensors) JobQueued: {'identifier': 'amiga_sensors', 'dependencies': OrderedDict()}
+[0.002850] (amiga_launch) JobStarted: {'identifier': 'amiga_launch'}
+[0.047149] (amiga_navigate) JobStarted: {'identifier': 'amiga_navigate'}
+[0.091202] (amiga_sensors) JobStarted: {'identifier': 'amiga_sensors'}
+[0.098853] (-) TimerEvent: {}
+[0.200756] (-) TimerEvent: {}
+[0.302753] (-) TimerEvent: {}
+[0.403647] (-) TimerEvent: {}
+[0.504588] (-) TimerEvent: {}
+[0.605579] (-) TimerEvent: {}
+[0.706489] (-) TimerEvent: {}
+[0.807388] (-) TimerEvent: {}
+[0.908341] (-) TimerEvent: {}
+[1.010149] (-) TimerEvent: {}
+[1.112183] (-) TimerEvent: {}
+[1.213207] (-) TimerEvent: {}
+[1.314123] (-) TimerEvent: {}
+[1.415043] (-) TimerEvent: {}
+[1.516267] (-) TimerEvent: {}
+[1.617267] (-) TimerEvent: {}
+[1.718201] (-) TimerEvent: {}
+[1.819124] (-) TimerEvent: {}
+[1.921020] (-) TimerEvent: {}
+[2.022943] (-) TimerEvent: {}
+[2.123762] (-) TimerEvent: {}
+[2.224597] (-) TimerEvent: {}
+[2.325517] (-) TimerEvent: {}
+[2.426379] (-) TimerEvent: {}
+[2.527320] (-) TimerEvent: {}
+[2.628371] (-) TimerEvent: {}
+[2.731690] (-) TimerEvent: {}
+[2.834294] (-) TimerEvent: {}
+[2.936019] (-) TimerEvent: {}
+[3.037027] (-) TimerEvent: {}
+[3.137937] (-) TimerEvent: {}
+[3.238893] (-) TimerEvent: {}
+[3.339679] (-) TimerEvent: {}
+[3.441556] (-) TimerEvent: {}
+[3.543147] (-) TimerEvent: {}
+[3.644588] (-) TimerEvent: {}
+[3.745549] (-) TimerEvent: {}
+[3.846446] (-) TimerEvent: {}
+[3.947344] (-) TimerEvent: {}
+[4.048455] (-) TimerEvent: {}
+[4.149803] (-) TimerEvent: {}
+[4.233483] (amiga_launch) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/amiga_launch', 'build', '--build-base', '/home/cairlab/amiga/src/build/amiga_launch/build', 'install', '--record', '/home/cairlab/amiga/src/build/amiga_launch/install.log', '--install-scripts', '$base/lib/amiga_launch', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cairlab/amiga/src/amiga_launch', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cairlab', 'SSH_AGENT_PID': '2821', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/cairlab', 'OLDPWD': '/home/cairlab/amiga/src/install', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2703', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/cairlab/amiga/src/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'cairlab', 'JOURNAL_STREAM': '8:58106', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'cairlab', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2892,unix/ubuntu:/tmp/.ICE-unix/2892', 'INVOCATION_ID': '8958211108a245aca607a85a19748668', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/03277795_dcdd_407d_a58d_72e487d6c20c', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.77', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/cairlab/amiga/src/install/amiga_sensors:/home/cairlab/amiga/src/install/amiga_navigate:/home/cairlab/amiga/src/install/amiga_launch:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cairlab/amiga/src/build/amiga_launch', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cairlab/amiga/src/build/amiga_launch/prefix_override:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[4.251180] (-) TimerEvent: {}
+[4.286959] (amiga_sensors) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/amiga_sensors', 'build', '--build-base', '/home/cairlab/amiga/src/build/amiga_sensors/build', 'install', '--record', '/home/cairlab/amiga/src/build/amiga_sensors/install.log', '--install-scripts', '$base/lib/amiga_sensors', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cairlab/amiga/src/amiga_sensors', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cairlab', 'SSH_AGENT_PID': '2821', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/cairlab', 'OLDPWD': '/home/cairlab/amiga/src/install', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2703', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/cairlab/amiga/src/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'cairlab', 'JOURNAL_STREAM': '8:58106', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'cairlab', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2892,unix/ubuntu:/tmp/.ICE-unix/2892', 'INVOCATION_ID': '8958211108a245aca607a85a19748668', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/03277795_dcdd_407d_a58d_72e487d6c20c', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.77', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/cairlab/amiga/src/install/amiga_sensors:/home/cairlab/amiga/src/install/amiga_navigate:/home/cairlab/amiga/src/install/amiga_launch:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cairlab/amiga/src/build/amiga_sensors', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cairlab/amiga/src/build/amiga_sensors/prefix_override:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[4.329284] (amiga_navigate) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/amiga_navigate', 'build', '--build-base', '/home/cairlab/amiga/src/build/amiga_navigate/build', 'install', '--record', '/home/cairlab/amiga/src/build/amiga_navigate/install.log', '--install-scripts', '$base/lib/amiga_navigate', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cairlab/amiga/src/amiga_navigate', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cairlab', 'SSH_AGENT_PID': '2821', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/cairlab', 'OLDPWD': '/home/cairlab/amiga/src/install', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2703', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/cairlab/amiga/src/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'cairlab', 'JOURNAL_STREAM': '8:58106', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'cairlab', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2892,unix/ubuntu:/tmp/.ICE-unix/2892', 'INVOCATION_ID': '8958211108a245aca607a85a19748668', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/03277795_dcdd_407d_a58d_72e487d6c20c', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.77', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/cairlab/amiga/src/install/amiga_sensors:/home/cairlab/amiga/src/install/amiga_navigate:/home/cairlab/amiga/src/install/amiga_launch:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cairlab/amiga/src/build/amiga_navigate', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=de7b9472b1565eebb3fde5b4386d51cc', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cairlab/amiga/src/build/amiga_navigate/prefix_override:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages:/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[4.351135] (-) TimerEvent: {}
+[4.452473] (-) TimerEvent: {}
+[4.553531] (-) TimerEvent: {}
+[4.654609] (-) TimerEvent: {}
+[4.755903] (-) TimerEvent: {}
+[4.857261] (-) TimerEvent: {}
+[4.958601] (-) TimerEvent: {}
+[5.061039] (-) TimerEvent: {}
+[5.120713] (amiga_launch) StdoutLine: {'line': b'running egg_info\n'}
+[5.124820] (amiga_launch) StdoutLine: {'line': b'writing ../build/amiga_launch/amiga_launch.egg-info/PKG-INFO\n'}
+[5.126224] (amiga_launch) StdoutLine: {'line': b'writing dependency_links to ../build/amiga_launch/amiga_launch.egg-info/dependency_links.txt\n'}
+[5.128183] (amiga_launch) StdoutLine: {'line': b'writing entry points to ../build/amiga_launch/amiga_launch.egg-info/entry_points.txt\n'}
+[5.129901] (amiga_launch) StdoutLine: {'line': b'writing requirements to ../build/amiga_launch/amiga_launch.egg-info/requires.txt\n'}
+[5.131057] (amiga_launch) StdoutLine: {'line': b'writing top-level names to ../build/amiga_launch/amiga_launch.egg-info/top_level.txt\n'}
+[5.161237] (-) TimerEvent: {}
+[5.176601] (amiga_sensors) StdoutLine: {'line': b'running egg_info\n'}
+[5.179462] (amiga_sensors) StdoutLine: {'line': b'writing ../build/amiga_sensors/amiga_sensors.egg-info/PKG-INFO\n'}
+[5.180636] (amiga_sensors) StdoutLine: {'line': b'writing dependency_links to ../build/amiga_sensors/amiga_sensors.egg-info/dependency_links.txt\n'}
+[5.183995] (amiga_sensors) StdoutLine: {'line': b'writing entry points to ../build/amiga_sensors/amiga_sensors.egg-info/entry_points.txt\n'}
+[5.186981] (amiga_sensors) StdoutLine: {'line': b'writing requirements to ../build/amiga_sensors/amiga_sensors.egg-info/requires.txt\n'}
+[5.187672] (amiga_sensors) StdoutLine: {'line': b'writing top-level names to ../build/amiga_sensors/amiga_sensors.egg-info/top_level.txt\n'}
+[5.206954] (amiga_navigate) StdoutLine: {'line': b'running egg_info\n'}
+[5.209725] (amiga_navigate) StdoutLine: {'line': b'writing ../build/amiga_navigate/amiga_navigate.egg-info/PKG-INFO\n'}
+[5.211045] (amiga_navigate) StdoutLine: {'line': b'writing dependency_links to ../build/amiga_navigate/amiga_navigate.egg-info/dependency_links.txt\n'}
+[5.214515] (amiga_navigate) StdoutLine: {'line': b'writing entry points to ../build/amiga_navigate/amiga_navigate.egg-info/entry_points.txt\n'}
+[5.217820] (amiga_navigate) StdoutLine: {'line': b'writing requirements to ../build/amiga_navigate/amiga_navigate.egg-info/requires.txt\n'}
+[5.218705] (amiga_navigate) StdoutLine: {'line': b'writing top-level names to ../build/amiga_navigate/amiga_navigate.egg-info/top_level.txt\n'}
+[5.259852] (amiga_launch) StdoutLine: {'line': b"reading manifest file '../build/amiga_launch/amiga_launch.egg-info/SOURCES.txt'\n"}
+[5.261363] (-) TimerEvent: {}
+[5.263747] (amiga_launch) StdoutLine: {'line': b"writing manifest file '../build/amiga_launch/amiga_launch.egg-info/SOURCES.txt'\n"}
+[5.264598] (amiga_launch) StdoutLine: {'line': b'running build\n'}
+[5.265016] (amiga_launch) StdoutLine: {'line': b'running build_py\n'}
+[5.267847] (amiga_launch) StdoutLine: {'line': b'running install\n'}
+[5.272282] (amiga_launch) StdoutLine: {'line': b'running install_lib\n'}
+[5.279306] (amiga_launch) StdoutLine: {'line': b'running install_data\n'}
+[5.280081] (amiga_launch) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.286536] (amiga_launch) StdoutLine: {'line': b"removing '/home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages/amiga_launch-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.288422] (amiga_launch) StdoutLine: {'line': b'Copying ../build/amiga_launch/amiga_launch.egg-info to /home/cairlab/amiga/src/install/amiga_launch/lib/python3.8/site-packages/amiga_launch-0.0.0-py3.8.egg-info\n'}
+[5.295139] (amiga_launch) StdoutLine: {'line': b'running install_scripts\n'}
+[5.316903] (amiga_sensors) StdoutLine: {'line': b"reading manifest file '../build/amiga_sensors/amiga_sensors.egg-info/SOURCES.txt'\n"}
+[5.319980] (amiga_sensors) StdoutLine: {'line': b"writing manifest file '../build/amiga_sensors/amiga_sensors.egg-info/SOURCES.txt'\n"}
+[5.320811] (amiga_sensors) StdoutLine: {'line': b'running build\n'}
+[5.321252] (amiga_sensors) StdoutLine: {'line': b'running build_py\n'}
+[5.324755] (amiga_sensors) StdoutLine: {'line': b'running install\n'}
+[5.330935] (amiga_sensors) StdoutLine: {'line': b'running install_lib\n'}
+[5.336705] (amiga_sensors) StdoutLine: {'line': b'running install_data\n'}
+[5.337573] (amiga_sensors) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.344717] (amiga_sensors) StdoutLine: {'line': b"removing '/home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.346333] (amiga_sensors) StdoutLine: {'line': b'Copying ../build/amiga_sensors/amiga_sensors.egg-info to /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors-0.0.0-py3.8.egg-info\n'}
+[5.350822] (amiga_sensors) StdoutLine: {'line': b'running install_scripts\n'}
+[5.358193] (amiga_navigate) StdoutLine: {'line': b"reading manifest file '../build/amiga_navigate/amiga_navigate.egg-info/SOURCES.txt'\n"}
+[5.361571] (-) TimerEvent: {}
+[5.362998] (amiga_navigate) StdoutLine: {'line': b"writing manifest file '../build/amiga_navigate/amiga_navigate.egg-info/SOURCES.txt'\n"}
+[5.364172] (amiga_navigate) StdoutLine: {'line': b'running build\n'}
+[5.366236] (amiga_launch) StdoutLine: {'line': b"writing list of installed files to '/home/cairlab/amiga/src/build/amiga_launch/install.log'\n"}
+[5.366877] (amiga_navigate) StdoutLine: {'line': b'running build_py\n'}
+[5.370087] (amiga_navigate) StdoutLine: {'line': b'copying amiga_navigate/pid_controller.py -> /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate\n'}
+[5.371019] (amiga_navigate) StdoutLine: {'line': b'running install\n'}
+[5.372707] (amiga_navigate) StdoutLine: {'line': b'running install_lib\n'}
+[5.377233] (amiga_navigate) StdoutLine: {'line': b'copying /home/cairlab/amiga/src/build/amiga_navigate/build/lib/amiga_navigate/pid_controller.py -> /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate\n'}
+[5.379948] (amiga_navigate) StdoutLine: {'line': b'byte-compiling /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate/pid_controller.py to pid_controller.cpython-38.pyc\n'}
+[5.386657] (amiga_navigate) StdoutLine: {'line': b'running install_data\n'}
+[5.388661] (amiga_navigate) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.398848] (amiga_navigate) StdoutLine: {'line': b"removing '/home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.400289] (amiga_navigate) StdoutLine: {'line': b'Copying ../build/amiga_navigate/amiga_navigate.egg-info to /home/cairlab/amiga/src/install/amiga_navigate/lib/python3.8/site-packages/amiga_navigate-0.0.0-py3.8.egg-info\n'}
+[5.404823] (amiga_navigate) StdoutLine: {'line': b'running install_scripts\n'}
+[5.419813] (amiga_sensors) StdoutLine: {'line': b'Installing gps script to /home/cairlab/amiga/src/install/amiga_sensors/lib/amiga_sensors\n'}
+[5.425816] (amiga_sensors) StdoutLine: {'line': b"writing list of installed files to '/home/cairlab/amiga/src/build/amiga_sensors/install.log'\n"}
+[5.461887] (-) TimerEvent: {}
+[5.478839] (amiga_launch) CommandEnded: {'returncode': 0}
+[5.481068] (amiga_navigate) StdoutLine: {'line': b'Installing navigate script to /home/cairlab/amiga/src/install/amiga_navigate/lib/amiga_navigate\n'}
+[5.485894] (amiga_navigate) StdoutLine: {'line': b'Installing pid_controller script to /home/cairlab/amiga/src/install/amiga_navigate/lib/amiga_navigate\n'}
+[5.494539] (amiga_navigate) StdoutLine: {'line': b"writing list of installed files to '/home/cairlab/amiga/src/build/amiga_navigate/install.log'\n"}
+[5.547192] (amiga_launch) JobEnded: {'identifier': 'amiga_launch', 'rc': 0}
+[5.554523] (amiga_sensors) CommandEnded: {'returncode': 0}
+[5.562663] (-) TimerEvent: {}
+[5.583581] (amiga_sensors) JobEnded: {'identifier': 'amiga_sensors', 'rc': 0}
+[5.591967] (amiga_navigate) CommandEnded: {'returncode': 0}
+[5.622187] (amiga_navigate) JobEnded: {'identifier': 'amiga_navigate', 'rc': 0}
+[5.625645] (-) EventReactorShutdown: {}

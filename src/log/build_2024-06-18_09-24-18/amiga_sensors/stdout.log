@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/amiga_sensors/amiga_sensors.egg-info
+writing ../build/amiga_sensors/amiga_sensors.egg-info/PKG-INFO
+writing dependency_links to ../build/amiga_sensors/amiga_sensors.egg-info/dependency_links.txt
+writing entry points to ../build/amiga_sensors/amiga_sensors.egg-info/entry_points.txt
+writing requirements to ../build/amiga_sensors/amiga_sensors.egg-info/requires.txt
+writing top-level names to ../build/amiga_sensors/amiga_sensors.egg-info/top_level.txt
+writing manifest file '../build/amiga_sensors/amiga_sensors.egg-info/SOURCES.txt'
+reading manifest file '../build/amiga_sensors/amiga_sensors.egg-info/SOURCES.txt'
+writing manifest file '../build/amiga_sensors/amiga_sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cairlab/amiga/src/build/amiga_sensors/build
+creating /home/cairlab/amiga/src/build/amiga_sensors/build/lib
+creating /home/cairlab/amiga/src/build/amiga_sensors/build/lib/amiga_sensors
+copying amiga_sensors/__init__.py -> /home/cairlab/amiga/src/build/amiga_sensors/build/lib/amiga_sensors
+copying amiga_sensors/gps.py -> /home/cairlab/amiga/src/build/amiga_sensors/build/lib/amiga_sensors
+running install
+running install_lib
+creating /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors
+copying /home/cairlab/amiga/src/build/amiga_sensors/build/lib/amiga_sensors/__init__.py -> /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors
+copying /home/cairlab/amiga/src/build/amiga_sensors/build/lib/amiga_sensors/gps.py -> /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors
+byte-compiling /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors/gps.py to gps.cpython-38.pyc
+running install_data
+creating /home/cairlab/amiga/src/install/amiga_sensors/share/ament_index
+creating /home/cairlab/amiga/src/install/amiga_sensors/share/ament_index/resource_index
+creating /home/cairlab/amiga/src/install/amiga_sensors/share/ament_index/resource_index/packages
+copying resource/amiga_sensors -> /home/cairlab/amiga/src/install/amiga_sensors/share/ament_index/resource_index/packages
+copying package.xml -> /home/cairlab/amiga/src/install/amiga_sensors/share/amiga_sensors
+running install_egg_info
+Copying ../build/amiga_sensors/amiga_sensors.egg-info to /home/cairlab/amiga/src/install/amiga_sensors/lib/python3.8/site-packages/amiga_sensors-0.0.0-py3.8.egg-info
+running install_scripts
+Installing gps script to /home/cairlab/amiga/src/install/amiga_sensors/lib/amiga_sensors
+writing list of installed files to '/home/cairlab/amiga/src/build/amiga_sensors/install.log'
