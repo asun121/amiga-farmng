@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
         	'navigate = amiga_navigate.navigate:main',
-        	'pid_controller = amiga_navigate.pid_controller:main'
+        	'pid_controller = amiga_navigate.pid_controller:main',
+        	'canbus_handler = amiga_navigate.canbus_handler:main'
         ],
     },
 )
