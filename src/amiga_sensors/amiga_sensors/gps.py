@@ -4,7 +4,8 @@ import pynmea2
 import rclpy
 from rclpy.node import Node
 
-from geometry_msgs.msg import Pose2D
+from sensor_msgs.msg import NavSatFix
+from nav_msgs.msg import Odometry
 
 PORT = '/dev/ttyUSB0'
 
@@ -30,7 +31,7 @@ def read_gps_data(serial_port):
                     latitude = msg.latitude
                     longitude = msg.longitude
                     heading = msg.true_track
-                return latitude, longitude, heading
+                return latitude, longitude
             except pynmea2.ParseError as e:
                 print(f"Parse error: {e}")
 
@@ -40,20 +41,21 @@ class GPS(Node):
         super().__init__('gps')
         self.get_logger().info('Launching GPS')
 
-        self.publisher_ = self.create_publisher(Pose2D, 'position', 10)
+        self.publisher_ = self.create_publisher(Odometry, '/odom', 10)
+        
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.i = 0
+
 
     def timer_callback(self):
-        msg = Pose2D()
-        y,x,theta = read_gps_data(PORT)
-        msg.x = x
-        msg.y = y
-        msg.theta = theta
+        msg = NavSatFix()
+        latitude,longitude = read_gps_data(PORT)
+        msg.latitude = latitude
+        msg.longitude = longitude
+
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.x + ',' + msg.y + ',' + msg.theta)
-        self.i += 1
+        self.get_logger().info('Publishing: "%s"' % msg.latitude + ',' + msg.longitude)
+
         
 def main(args=None):
     rclpy.init(args=args)

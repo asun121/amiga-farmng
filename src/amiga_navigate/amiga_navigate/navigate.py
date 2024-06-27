@@ -18,6 +18,8 @@ class Navigate(Node):
             waypoint = self.waypoints[self.index]
             msg = Float32MultiArray(data=list(waypoint))
             self.publisher_.publish(msg)
+            self.get_logger().info('Publishing Point: ' + str(waypoint))
+
             self.index += 1
 
 def main(args=None):
