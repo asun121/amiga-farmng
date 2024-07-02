@@ -10,6 +10,7 @@ pid_controller:
 gps_navigate:
   ros__parameters:
     waypoints: [
-      "1.0,1.0",
-      "2.0,2.0"
+      (40.748817, -73.985428),  # First waypoint (set to 0,0)
+      (40.748900, -73.986200),
+      (40.749000, -73.987000),
     ]

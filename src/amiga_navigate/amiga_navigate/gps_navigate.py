@@ -19,8 +19,12 @@ class GPSNavigate(Node):
 
         self.declare_parameter('waypoints', [])
         waypoints_param = self.get_parameter('waypoints').get_parameter_value().string_array_value
+        self.publisher_ = self.create_publisher(PoseStamped, 'gps_origin', 10)
+
+
         self.waypoints = self.parse_waypoints(waypoints_param)
         self.current_index = 0
+
         self.get_logger().info('Navigate service started')
 
     def parse_waypoints(self, waypoints_param):
@@ -46,7 +50,7 @@ class GPSNavigate(Node):
             relative_x = x_m - origin_x
             relative_y = y_m - origin_y
             relative_waypoints.append((relative_x, relative_y))
-        
+        self.publisher_.publish(relative_waypoints[0])
         return relative_waypoints
 
     def provide_waypoint_callback(self, request, response):
