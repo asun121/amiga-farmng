@@ -6,3 +6,10 @@ pid_controller:
     'kp_angular': 0.65
     'ki_angular': 0.0
     'kd_angular': 0.01
+
+gps_navigate:
+  ros__parameters:
+    waypoints: [
+      "1.0,1.0",
+      "2.0,2.0"
+    ]

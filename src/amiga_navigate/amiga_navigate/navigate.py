@@ -8,19 +8,20 @@ class Navigate(Node):
     def __init__(self):
         super().__init__('navigate')
         self.service = self.create_service(Waypoint, 'navigate', self.provide_waypoint_callback)
-        # self.waypoints = [ #TODO: Change from list to a queue os you don't have to track index
-        #     [1.0, 1.0],
-        #     [2.0, 0.0],
-        #     [3.0, 1.0],
-        #     [4.0, 0.0],
-        #     [5.0, 1.0],
-        # ]
+        self.waypoints = [ #TODO: Change from list to a queue os you don't have to track index
+            [1.0, 1.0],
+            [2.0, 0.0],
+            [3.0, 1.0],
+            [4.0, 0.0],
+            [5.0, 1.0],
+        ]
 
-        self.declare_parameter('waypoints', [])
-        waypoints_param = self.get_parameter('waypoints').get_parameter_value().string_array_value
-        self.waypoints = self.parse_waypoints(waypoints_param)
+        # self.declare_parameter('waypoints', [])
+        # waypoints_param = self.get_parameter('waypoints').get_parameter_value().string_array_value
+        # self.waypoints = self.parse_waypoints(waypoints_param)
         self.current_index = 0
         self.get_logger().info('Navigate service started')
+
 
     def provide_waypoint_callback(self, request, response):
         self.get_logger().info('Incoming Request')
@@ -39,7 +40,6 @@ class Navigate(Node):
 
             response.success = False
         return response
-
 def main(args=None):
     rclpy.init(args=args)
     node = Navigate()
