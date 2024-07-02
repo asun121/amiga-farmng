@@ -15,7 +15,7 @@ class CANBusHandler(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        self.ser = serial.Serial('/dev/ttyACM0', 9600)
+        self.ser = serial.Serial('/dev/ttyACM0', 115200)
 
     def listener_callback(self, msg):
         self.get_logger().info('Twist: "%s"' % msg)

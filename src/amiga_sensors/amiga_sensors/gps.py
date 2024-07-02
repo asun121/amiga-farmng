@@ -48,11 +48,11 @@ class GPS(Node):
 
 
     def timer_callback(self):
-        msg = NavSatFix()
+        msg = Odometry()
         latitude,longitude = read_gps_data(PORT)
-        msg.latitude = latitude
-        msg.longitude = longitude
-
+        msg.pose.pose.position.x = longitude
+        msg.pose.pose.position.y = latitude
+        msg.pose.pose.position.z = 0.0
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.latitude + ',' + msg.longitude)
 

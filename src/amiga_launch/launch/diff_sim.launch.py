@@ -1,6 +1,7 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
     return LaunchDescription([
         Node(
@@ -13,12 +14,7 @@ def generate_launch_description():
             executable='pid_controller',
             name='pid_controller',
             parameters=[
-                {'kp_linear': 1.0},
-                {'ki_linear': 0.0},
-                {'kd_linear': 0.0},
-                {'kp_angular': 1.0},
-                {'ki_angular': 0.0},
-                {'kd_angular': 0.0}
+                'config/sim_params.yaml'
             ]
         )
     ])
