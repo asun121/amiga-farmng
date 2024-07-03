@@ -34,11 +34,11 @@ class GPSNavigate(Node):
             waypoint = PoseStamped()
             waypoint.pose.position.x = x
             waypoint.pose.position.y = y
-            waypoint.pose.position.z = 0
+            waypoint.pose.position.z = 0.0
             waypoints.append(waypoint)
         # Define the projection (WGS84 to UTM)
-        wgs84 = pyproj.Proj(proj='latlong', datum='WGS84')
-        utm = pyproj.Proj(proj='utm', zone=18, datum='WGS84')  # Change zone according to your location
+        wgs84 = pyproj.Proj(proj='latlong', datum='NAD83')
+        utm = pyproj.Proj(proj='utm', zone=18, datum='NAD83')  # Change zone according to your location
         
         # Convert the first waypoint to UTM and set as origin
         origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0].pose.position.x, waypoints[0].pose.position.y)
@@ -50,15 +50,24 @@ class GPSNavigate(Node):
             relative_x = x_m - origin_x
             relative_y = y_m - origin_y
             relative_waypoints.append((relative_x, relative_y))
-        self.publisher_.publish(relative_waypoints[0])
+        orig = PoseStamped()
+        orig.pose.position.x = relative_waypoints[0][0]
+        orig.pose.position.y = relative_waypoints[0][1]
+        self.publisher_.publish(orig)
         return relative_waypoints
 
     def provide_waypoint_callback(self, request, response):
         self.get_logger().info('Incoming Request')
         if self.current_index < len(self.waypoints):
-            response.waypoint = self.waypoints[self.current_index]
-            self.current_index += 1
+            waypoint = self.waypoints[self.current_index]
+            response.waypoint = PoseStamped()
+            response.waypoint.header.frame_id = 'map'
+            response.waypoint.header.stamp = self.get_clock().now().to_msg()
+            response.waypoint.pose.position.x = float(waypoint[0])
+            response.waypoint.pose.position.y = float(waypoint[1])
+            response.waypoint.pose.position.z = 0.0
             response.success = True
+            self.current_index += 1
         else:
             self.get_logger().info('No waypoints in list')
 
