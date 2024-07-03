@@ -80,3 +80,13 @@ class GPSNavigate(Node):
             relative_waypoints.append((relative_x, relative_y))
         
         return relative_waypoints
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = GPSNavigate()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

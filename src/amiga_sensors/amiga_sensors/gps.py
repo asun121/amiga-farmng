@@ -7,6 +7,7 @@ from rclpy.node import Node
 import pyproj
 from geometry_msgs.msg import Quaternion
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseStamped
 import numpy as np
 
 PORT = '/dev/ttyUSB0'
@@ -58,10 +59,14 @@ class GPS(Node):
         self.get_logger().info('Launching GPS')
 
         self.publisher_ = self.create_publisher(Odometry, '/odom', 10)
-        
+        self.subscription = self.create_subscription(PoseStamped, '/gps_origin', self.origin_callback, 10)
+        self.origin = None
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
+    def origin_callback(self, msg):
+        self.origin = msg
+        self.get_logger().info('Origin set to: "%s"' % msg.pose.position.x + ',' + msg.pose.position.y)
 
     def timer_callback(self):
         msg = Odometry()
@@ -73,22 +78,21 @@ class GPS(Node):
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % latitude + ',' + longitude + ',' + heading)
 
-    def convert_to_meters(waypoints):
+    #Convert current gps data to meters relative to the origin
+    def convert_to_meters(self,gps):
         # Define the projection (WGS84 to UTM)
         wgs84 = pyproj.Proj(proj='latlong', datum='WGS84')
         utm = pyproj.Proj(proj='utm', zone=18, datum='WGS84')  # Change zone according to your location
         
         # Convert the first waypoint to UTM and set as origin
-        origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0][0], waypoints[0][1])
+        origin_x, origin_y = self.origin.pose.position.x, self.origin.pose.position.y
         
-        relative_waypoints = []
-        for lat, lon in waypoints:
-            x, y = pyproj.transform(wgs84, utm, lat, lon)
-            relative_x = x - origin_x
-            relative_y = y - origin_y
-            relative_waypoints.append((relative_x, relative_y))
-        
-        return relative_waypoints
+        x,y = gps.pose.position.x, gps.pose.position.y
+        x_m, y_m = pyproj.transform(wgs84, utm, x, y)
+        relative_x = x_m - origin_x
+        relative_y = y_m - origin_y
+        relative_pos = (relative_x, relative_y)        
+        return relative_pos
 
 
 def main(args=None):
