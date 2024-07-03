@@ -15,12 +15,17 @@ class CANBusHandler(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        self.ser = serial.Serial('/dev/ttyACM0', 115200)
+        try:
+            self.ser = serial.Serial('/dev/ttyACM0', 115200)
+        except:
+            self.ser = serial.Serial('/dev/ttyACM1', 115200)
 
     def listener_callback(self, msg):
         self.get_logger().info('Twist: "%s"' % msg)
-        twist_str = str(msg.linear.x) + " " + str(msg.angular.z)
-        self.ser.write(twist_str.encode('utf-8'))
+        #twist_str = str(msg.linear.x) + "," + str(msg.angular.z)
+        #self.ser.write(twist_str.encode('ascii'))
+
+        self.ser.write((str(msg.linear.x) + "," + str(msg.angular.z)).encode('utf-8'))
 
 
 def main(args=None):
