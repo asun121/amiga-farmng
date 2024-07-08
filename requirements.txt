@@ -3,3 +3,4 @@ pynmea2==1.19.0
 simple-pid==2.0.0
 geopy==2.4.1
 pyproj==3.6.1
+do-mpc==4.6.5
