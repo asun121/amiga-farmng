@@ -2,8 +2,10 @@ import rclpy
 from rclpy.node import Node
 from rclpy.service import Service
 from geometry_msgs.msg import PoseStamped
-import pyproj
+# import pyproj
 from amiga_interfaces.srv import Waypoint
+import math
+from geopy.distance import geodesic
 
 class GPSNavigate(Node):
     def __init__(self):
@@ -31,30 +33,57 @@ class GPSNavigate(Node):
         waypoints = []
         for s in waypoints_param:
             x,y = map(float, s.split(','))
-            waypoint = PoseStamped()
-            waypoint.pose.position.x = x
-            waypoint.pose.position.y = y
-            waypoint.pose.position.z = 0.0
-            waypoints.append(waypoint)
+            waypoints.append([x,y])
+            # waypoint = PoseStamped()
+            # waypoint.pose.position.x = x
+            # waypoint.pose.position.y = y
+            # waypoint.pose.position.z = 0.0
+            # waypoints.append(waypoint)
         # Define the projection (WGS84 to UTM)
-        wgs84 = pyproj.Proj(proj='latlong', datum='NAD83')
-        utm = pyproj.Proj(proj='utm', zone=18, datum='NAD83')  # Change zone according to your location
+        # wgs84 = pyproj.Proj(proj='latlong', datum='NAD83')
+        # utm = pyproj.Proj(proj='utm', zone=18, datum='NAD83')  # Change zone according to your location
         
         # Convert the first waypoint to UTM and set as origin
-        origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0].pose.position.x, waypoints[0].pose.position.y)
-        
-        relative_waypoints = []
-        for way in waypoints:
-            x,y = way.pose.position.x, way.pose.position.y
-            x_m, y_m = pyproj.transform(wgs84, utm, x, y)
-            relative_x = x_m - origin_x
-            relative_y = y_m - origin_y
-            relative_waypoints.append((relative_x, relative_y))
+        #origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0].pose.position.x, waypoints[0].pose.position.y)
+        origin = (waypoints[0][0], waypoints[0][1])
+        relative_waypoints = [(0,0)]
+        for waypoint in waypoints[1:]:
+            distance = geodesic(origin, waypoint).meters
+            bearing = self.calculate_initial_compass_bearing(origin, waypoint)
+            
+            relative_x = distance * math.cos(math.radians(bearing))
+            relative_y = distance * math.sin(math.radians(bearing))
+            
+            relative_waypoints.append([relative_x, relative_y])
         orig = PoseStamped()
-        orig.pose.position.x = relative_waypoints[0][0]
-        orig.pose.position.y = relative_waypoints[0][1]
+        orig.pose.position.x = float(relative_waypoints[0][0])
+        orig.pose.position.y = float(relative_waypoints[0][1])
         self.publisher_.publish(orig)
         return relative_waypoints
+    def calculate_initial_compass_bearing(self,pointA, pointB):
+        lat1 = math.radians(pointA[0])
+        lat2 = math.radians(pointB[0])
+        diffLong = math.radians(pointB[1] - pointA[1])
+
+        x = math.sin(diffLong) * math.cos(lat2)
+        y = math.cos(lat1) * math.sin(lat2) - (math.sin(lat1) * math.cos(lat2) * math.cos(diffLong))
+
+        initial_bearing = math.atan2(x, y)
+        initial_bearing = math.degrees(initial_bearing)
+        compass_bearing = (initial_bearing + 360) % 360
+
+        return compass_bearing
+        # for way in waypoints:
+        #     x,y = way.pose.position.x, way.pose.position.y
+        #     x_m, y_m = pyproj.transform(wgs84, utm, x, y)
+        #     relative_x = x_m - origin_x
+        #     relative_y = y_m - origin_y
+        #     relative_waypoints.append((relative_x, relative_y))
+        # orig = PoseStamped()
+        # orig.pose.position.x = relative_waypoints[0][0]
+        # orig.pose.position.y = relative_waypoints[0][1]
+        # self.publisher_.publish(orig)
+        # return relative_waypoints
 
     def provide_waypoint_callback(self, request, response):
         self.get_logger().info('Incoming Request')
@@ -73,22 +102,22 @@ class GPSNavigate(Node):
 
             response.success = False
         return response
-    def convert_to_meters(waypoints):
-        # Define the projection (WGS84 to UTM)
-        wgs84 = pyproj.Proj(proj='latlong', datum='WGS84')
-        utm = pyproj.Proj(proj='utm', zone=18, datum='WGS84')  # Change zone according to your location
+    # def convert_to_meters(waypoints):
+    #     # Define the projection (WGS84 to UTM)
+    #     wgs84 = pyproj.Proj(proj='latlong', datum='WGS84')
+    #     utm = pyproj.Proj(proj='utm', zone=18, datum='WGS84')  # Change zone according to your location
         
-        # Convert the first waypoint to UTM and set as origin
-        origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0][0], waypoints[0][1])
+    #     # Convert the first waypoint to UTM and set as origin
+    #     origin_x, origin_y = pyproj.transform(wgs84, utm, waypoints[0][0], waypoints[0][1])
         
-        relative_waypoints = []
-        for lat, lon in waypoints:
-            x, y = pyproj.transform(wgs84, utm, lat, lon)
-            relative_x = x - origin_x
-            relative_y = y - origin_y
-            relative_waypoints.append((relative_x, relative_y))
+    #     relative_waypoints = []
+    #     for lat, lon in waypoints:
+    #         x, y = pyproj.transform(wgs84, utm, lat, lon)
+    #         relative_x = x - origin_x
+    #         relative_y = y - origin_y
+    #         relative_waypoints.append((relative_x, relative_y))
         
-        return relative_waypoints
+    #     return relative_waypoints
 
 def main(args=None):
     rclpy.init(args=args)
