@@ -13,6 +13,12 @@ def generate_launch_description():
             ]
         ),
         Node(
+            package='amiga_sensors',
+            executable='gps',
+            name='gps',
+
+        ),
+        Node(
             package='amiga_navigate',
             executable='pid_controller',
             name='pid_controller',
