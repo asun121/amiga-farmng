@@ -14,7 +14,7 @@ import math
 GPS_PORT = '/dev/ttyACM0'
 
 def read_gps_data(serial_port):
-    with serial.Serial(serial_port, 9600, timeout=1) as ser:
+    with serial.Serial(serial_port, 38400, timeout=1) as ser:
         line = ser.readline().decode('utf-8').strip()
         if line.startswith('$GP') or line.startswith('$GN'):
             try:
@@ -22,11 +22,13 @@ def read_gps_data(serial_port):
                 if isinstance(msg, pynmea2.types.talker.GGA):
                     latitude = msg.latitude
                     longitude = msg.longitude
+                    heading = 0.0
                 elif isinstance(msg, pynmea2.types.talker.VTG):
                     heading = msg.true_track
                 elif isinstance(msg, pynmea2.types.talker.GLL):
                     latitude = msg.latitude
                     longitude = msg.longitude
+                    heading = 0.0
                 elif isinstance(msg, pynmea2.types.talker.RMC):
                     latitude = msg.latitude
                     longitude = msg.longitude
@@ -35,7 +37,7 @@ def read_gps_data(serial_port):
                     latitude = msg.latitude
                     longitude = msg.longitude
                     heading = msg.true_track
-                return latitude, longitude, heading
+                return [latitude, longitude, heading]
             except pynmea2.ParseError as e:
                 print(f"Parse error: {e}")
 
@@ -70,18 +72,19 @@ class GPS(Node):
 
     def origin_callback(self, msg):
         self.origin = msg
-        self.get_logger().info('Origin set to: "%s"' % msg.pose.position.x + ',' + msg.pose.position.y)
+        self.get_logger().info('Origin set to: "%s"' % str(msg.pose.position.x) + ',' + str(msg.pose.position.y))
 
     def timer_callback(self):
         msg = Odometry()
-        latitude,longitude,heading = read_gps_data('/dev/ttyACM0')
-        curr_pose = self.convert_to_meters
-        msg.pose.pose.position.x = longitude
-        msg.pose.pose.position.y = latitude
+        gp = read_gps_data('/dev/ttyACM0')
+       # latitude,longitude,heading = gp[0], gp[1], gp[2]
+        curr_pose = self.convert_to_meters(gp)
+        msg.pose.pose.position.x = curr_pose[0]
+        msg.pose.pose.position.y = curr_pose[1]
         msg.pose.pose.position.z = 0.0
-        msg.pose.pose.orientation = euler_to_quaternion(heading, 0 ,0)
+        msg.pose.pose.orientation = euler_to_quaternion(gp[2], 0 ,0)
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % latitude + ',' + longitude + ',' + heading)
+        self.get_logger().info('Publishing: "%s"' % str(curr_pose[0]) + ',' + str(curr_pose[1]) + ',' + str(gp[2]))
 
     # #Convert current gps data to meters relative to the origin
     # def convert_to_meters(self,gps):
@@ -98,9 +101,9 @@ class GPS(Node):
     #     relative_y = y_m - origin_y
     #     relative_pos = (relative_x, relative_y)        
     #     return relative_pos
-    def convert_to_meters(self,gps):
+    def convert_to_meters(self,gp):
         orig = [self.origin.pose.position.x,self.origin.pose.position.y]
-        pos = [gps.pose.position.x, gps.pose.position.y]
+        pos = [gp[0], gp[1]]
         distance = geodesic(orig, pos).meters
         bearing = self.calculate_initial_compass_bearing(orig, pos)
         

@@ -56,8 +56,8 @@ class GPSNavigate(Node):
             
             relative_waypoints.append([relative_x, relative_y])
         orig = PoseStamped()
-        orig.pose.position.x = float(relative_waypoints[0][0])
-        orig.pose.position.y = float(relative_waypoints[0][1])
+        orig.pose.position.x = float(waypoints[0][0])
+        orig.pose.position.y = float(waypoints[0][1])
         self.publisher_.publish(orig)
         return relative_waypoints
     def calculate_initial_compass_bearing(self,pointA, pointB):
