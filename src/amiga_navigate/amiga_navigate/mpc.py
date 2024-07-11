@@ -2,12 +2,11 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped, Twist
 from nav_msgs.msg import Odometry
-from my_robot.srv import Waypoint
+from amiga_interfaces.srv import Waypoint
 import do_mpc
 import numpy as np
 from casadi import *
 
-import model
 
 class MPCController(Node):
     def __init__(self):
@@ -31,7 +30,7 @@ class MPCController(Node):
             Odometry, 'odom', self.odom_callback, 10)
         self.cmd_vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
 
-        self.waypoint_client = self.create_client(Waypoint, 'provide_waypoint')
+        self.waypoint_client = self.create_client(Waypoint, 'navigate')
         while not self.waypoint_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Waypoint service not available, waiting...')
 
@@ -133,3 +132,30 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+
+import do_mpc
+from casadi import *
+
+def model():
+    model_type = 'continuous'
+    model = do_mpc.model.Model(model_type)
+
+    # States
+    x = model.set_variable(var_type='_x', var_name='x', shape=(1, 1))
+    y = model.set_variable(var_type='_x', var_name='y', shape=(1, 1))
+    theta = model.set_variable(var_type='_x', var_name='theta', shape=(1, 1))
+
+    # Controls
+    v = model.set_variable(var_type='_u', var_name='v', shape=(1, 1))
+    omega = model.set_variable(var_type='_u', var_name='omega', shape=(1, 1))
+
+    # Model equations
+    model.set_rhs('x', v * cos(theta))
+    model.set_rhs('y', v * sin(theta))
+    model.set_rhs('theta', omega)
+
+    model.setup()
+
+    return model
+ 

@@ -13,6 +13,8 @@ import math
 
 GPS_PORT = '/dev/ttyACM0'
 
+
+
 def read_gps_data(serial_port):
     with serial.Serial(serial_port, 38400, timeout=1) as ser:
         line = ser.readline().decode('utf-8').strip()
@@ -63,6 +65,15 @@ class GPS(Node):
 
         self.publisher_ = self.create_publisher(Odometry, '/odom', 10)
         self.subscription = self.create_subscription(PoseStamped, '/gps_origin', self.origin_callback, 10)
+        try:
+            self.gps_port = serial.Serial('/dev/ttyACM0', 38400, timeout=1)
+        except:
+            self.gps_port = serial.Serial('/dev/ttyACM1', 38400, timeout=1)
+
+        self.latitude = None
+        self.longitude = None
+        self.heading = 0.0
+
         default_orig = PoseStamped()
         default_orig.pose.position.x = 42.875809
         default_orig.pose.position.y = -77.007174
@@ -70,13 +81,31 @@ class GPS(Node):
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
+    def get_gps(self):
+        line = self.gps_port.readline().decode('utf-8').strip()
+        if line.startswith('$GPGGA'):
+            try:
+                msg = pynmea2.parse(line)
+                if isinstance(msg, pynmea2.types.talker.GGA):
+                    self.latitude = msg.latitude
+                    self.longitude = msg.longitude
+            except pynmea2.ParseError as e:
+                print(f"Parse error: {e}")
+        elif line.startswith('$GNETC'):
+            try:
+                msg = line.split(',')
+                self.heading = float(msg[4])
+            except pynmea2.ParseError as e:
+                print(f"Parse error: {e}")
+
     def origin_callback(self, msg):
         self.origin = msg
         self.get_logger().info('Origin set to: "%s"' % str(msg.pose.position.x) + ',' + str(msg.pose.position.y))
 
     def timer_callback(self):
         msg = Odometry()
-        gp = read_gps_data('/dev/ttyACM0')
+        self.get_gps()
+        gp = [self.latitude, self.longitude, self.heading]
        # latitude,longitude,heading = gp[0], gp[1], gp[2]
         curr_pose = self.convert_to_meters(gp)
         msg.pose.pose.position.x = curr_pose[0]
