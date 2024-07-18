@@ -8,8 +8,6 @@ from geometry_msgs.msg import Quaternion
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseStamped
 import numpy as np
-from geopy.distance import geodesic
-import math
 
 GPS_PORT = '/dev/ttyACM0'
 
@@ -64,7 +62,6 @@ class GPS(Node):
         self.get_logger().info('Launching GPS Module')
 
         self.publisher_ = self.create_publisher(Odometry, '/odom', 10)
-        self.subscription = self.create_subscription(PoseStamped, '/gps_origin', self.origin_callback, 10)
         try:
             self.gps_port = serial.Serial('/dev/ttyACM0', 38400, timeout=1)
         except:
@@ -74,10 +71,6 @@ class GPS(Node):
         self.longitude = None
         self.heading = 0.0
 
-        default_orig = PoseStamped()
-        default_orig.pose.position.x = 42.875809
-        default_orig.pose.position.y = -77.007174
-        self.origin = default_orig
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
@@ -91,29 +84,24 @@ class GPS(Node):
                     self.longitude = msg.longitude
             except pynmea2.ParseError as e:
                 print(f"Parse error: {e}")
-        elif line.startswith('$GNETC'):
+        elif line.startswith('$GPETC'):
             try:
                 msg = line.split(',')
                 self.heading = float(msg[4])
             except pynmea2.ParseError as e:
                 print(f"Parse error: {e}")
 
-    def origin_callback(self, msg):
-        self.origin = msg
-        self.get_logger().info('Origin set to: "%s"' % str(msg.pose.position.x) + ',' + str(msg.pose.position.y))
-
     def timer_callback(self):
         msg = Odometry()
         self.get_gps()
         gp = [self.latitude, self.longitude, self.heading]
        # latitude,longitude,heading = gp[0], gp[1], gp[2]
-        curr_pose = self.convert_to_meters(gp)
-        msg.pose.pose.position.x = curr_pose[0]
-        msg.pose.pose.position.y = curr_pose[1]
+        msg.pose.pose.position.x = gp[0]
+        msg.pose.pose.position.y = gp[1]
         msg.pose.pose.position.z = 0.0
         msg.pose.pose.orientation = euler_to_quaternion(gp[2], 0 ,0)
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % str(curr_pose[0]) + ',' + str(curr_pose[1]) + ',' + str(gp[2]))
+        self.get_logger().info('Publishing: "%s"' % str(gp[0]) + ',' + str(gp[1]) + ',' + str(gp[2]))
 
     # #Convert current gps data to meters relative to the origin
     # def convert_to_meters(self,gps):
@@ -130,30 +118,7 @@ class GPS(Node):
     #     relative_y = y_m - origin_y
     #     relative_pos = (relative_x, relative_y)        
     #     return relative_pos
-    def convert_to_meters(self,gp):
-        orig = [self.origin.pose.position.x,self.origin.pose.position.y]
-        pos = [gp[0], gp[1]]
-        distance = geodesic(orig, pos).meters
-        bearing = self.calculate_initial_compass_bearing(orig, pos)
-        
-        relative_x = distance * math.cos(math.radians(bearing))
-        relative_y = distance * math.sin(math.radians(bearing))
-        
-        return [relative_x, relative_y]
 
-    def calculate_initial_compass_bearing(self, pointA, pointB):
-        lat1 = math.radians(pointA[0])
-        lat2 = math.radians(pointB[0])
-        diffLong = math.radians(pointB[1] - pointA[1])
-
-        x = math.sin(diffLong) * math.cos(lat2)
-        y = math.cos(lat1) * math.sin(lat2) - (math.sin(lat1) * math.cos(lat2) * math.cos(diffLong))
-
-        initial_bearing = math.atan2(x, y)
-        initial_bearing = math.degrees(initial_bearing)
-        compass_bearing = (initial_bearing + 360) % 360
-
-        return compass_bearing
 
 def main(args=None):
     rclpy.init(args=args)
