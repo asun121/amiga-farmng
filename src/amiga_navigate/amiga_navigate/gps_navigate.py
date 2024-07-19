@@ -9,7 +9,7 @@ class GPSNavigate(Node):
     def __init__(self):
         super().__init__('gps_navigate')
         self.service = self.create_service(Waypoint, 'navigate', self.provide_waypoint_callback)
-        self.declare_parameter('waypoints', [])
+        self.declare_parameter('waypoints')
         waypoints_param = self.get_parameter('waypoints').get_parameter_value().string_array_value
 
         self.waypoints = self.parse_waypoints(waypoints_param)
@@ -19,6 +19,7 @@ class GPSNavigate(Node):
 
     def parse_waypoints(self, waypoints_param):
         waypoints = []
+        self.get_logger().info(f'Waypoints: {waypoints_param}')
         for s in waypoints_param:
             x,y = map(float, s.split(','))
             waypoints.append([x,y])
